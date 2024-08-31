@@ -50,6 +50,7 @@ export const signInAction = async (formData: FormData) => {
     return encodedRedirect("error", "/sign-in", error.message);
   }
 
+  revalidatePath("/");
   return redirect("/protected");
 };
 
