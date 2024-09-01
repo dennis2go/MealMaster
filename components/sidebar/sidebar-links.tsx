@@ -17,6 +17,7 @@ export default function SidebarLinks() {
       <div className="flex flex-col gap-6">
         {links.map((link, idx) => (
           <SideBarLink
+            key={idx}
             text={link.title}
             href={link.href}
             icon={link.icon}

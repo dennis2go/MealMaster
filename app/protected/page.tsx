@@ -1,3 +1,4 @@
+import { EatingPlan } from "@/components/eatingplan/eating-plan";
 import FetchDataSteps from "@/components/tutorial/fetch-data-steps";
 import { createClient } from "@/utils/supabase/server";
 import { InfoIcon } from "lucide-react";
@@ -14,5 +15,9 @@ export default async function ProtectedPage() {
     return redirect("/sign-in");
   }
 
-  return <div></div>;
+  return (
+    <div className="px-16 pt-10">
+      <EatingPlan />
+    </div>
+  );
 }

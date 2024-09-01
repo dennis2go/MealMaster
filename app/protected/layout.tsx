@@ -16,7 +16,7 @@ export default function RootLayout({
           <div className=" bg-stone-100 w-28 sm:w-80 flex flex-col h-screen py-10 items-center">
             <SidebarLinks />
           </div>
-          <div className="h-10 bg-amber-300 flex-1">{children}</div>
+          <div className="w-full ">{children}</div>
         </div>
       </body>
     </html>
