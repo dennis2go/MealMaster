@@ -13,7 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-row">
-          <div className=" bg-stone-100 w-28 sm:w-80 flex flex-col h-screen py-10 items-center">
+          <div className=" bg-stone-100 w-48 md:w-80 flex flex-col h-screen py-10 items-center">
             <SidebarLinks />
           </div>
           <div className="w-full ">{children}</div>

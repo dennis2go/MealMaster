@@ -14,7 +14,7 @@ export default function SidebarLinks() {
   return (
     <div className="flex flex-col gap-10 items-center">
       <p> MealMaster</p>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 items-center">
         {links.map((link, idx) => (
           <SideBarLink
             key={idx}
