@@ -7,6 +7,7 @@ export const weekDays = [
   "Thursday",
   "Friday",
   "Saturday",
+  "Sunday",
 ];
 
 /**

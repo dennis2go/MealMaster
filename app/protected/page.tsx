@@ -16,7 +16,7 @@ export default async function ProtectedPage() {
   }
 
   return (
-    <div className="px-6 lg:px-12 pt-10">
+    <div className="px-6 lg:px-12 pt-6">
       <EatingPlan />
     </div>
   );
