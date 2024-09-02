@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { IconType } from "react-icons";
 import {
   Card,
@@ -9,24 +9,39 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Input } from "../ui/input";
 
-export interface EatingPlanRowProps {
-  weekDay: string;
-}
+export interface EatingPlanInputProps {}
 
-export const EatingPlanRow: FC<EatingPlanRowProps> = (props) => {
+export const EatingPlanInput: FC<EatingPlanInputProps> = (props) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [mealName, setMealName] = useState<string | null>("");
+
+  // Saves the changed text in the Database after 3500ms of no new input
+  async function onInputChange(value: string) {
+    setTimeout(async () => {
+      // await setBacklog(value)
+    }, 3500);
+  }
+
   return (
-    <>
-      <Card>
-        <CardHeader className="py-2 ">
-          <div className="flex flex-row justify-start items-center gap-4">
-            <p className="text-base bg  min-w-32">{props.weekDay}</p>
-            <p className="text-sm text-foreground/60">{"01.09"}</p>
-          </div>
-        </CardHeader>
-        <div className="w-full h-[1px] bg-foreground/60"></div>
-        <CardDescription className=""></CardDescription>
-      </Card>
-    </>
+    <div className="flex flex-row items-center gap-2">
+      <div
+        className={`transition-all w-[6px] h-[6px] rounded-lg ${isFocused ? "bg-blue-400" : "bg-foreground/80"}`}
+      ></div>
+      <Input
+        type="text"
+        value={mealName!}
+        onChange={(e) => onInputChange(e.target.value)}
+        onFocus={() => setIsFocused(!isFocused)}
+        onBlur={() => setIsFocused(!isFocused)}
+        style={{
+          outline: "none",
+          boxShadow: "none",
+        }}
+        className="bg-transparent text-foreground flex border-none h-12 text-sm"
+        placeholder="insert Meal"
+      />
+    </div>
   );
 };

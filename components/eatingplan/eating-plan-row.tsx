@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { EatingPlanInput } from "./eating-plan-input";
 
 export interface EatingPlanRowProps {
   weekDay: string;
@@ -25,7 +26,11 @@ export const EatingPlanRow: FC<EatingPlanRowProps> = (props) => {
           </div>
         </CardHeader>
         <div className="w-full h-[1px] bg-foreground/60"></div>
-        <CardDescription className=""></CardDescription>
+        <CardDescription className="px-6">
+          <EatingPlanInput />
+          <EatingPlanInput />
+          <EatingPlanInput />
+        </CardDescription>
       </Card>
     </>
   );

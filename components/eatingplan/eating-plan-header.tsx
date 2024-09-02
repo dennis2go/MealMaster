@@ -46,12 +46,14 @@ export const EatingPlanHeader: FC<EatingPlanHeaderProps> = (props) => {
     };
     fetchTableName();
   }, []);
+
   // Saves the changed text in the Database after 3500ms of no new input
   async function onInputChange(value: string) {
     setTimeout(async () => {
       // await setBacklog(value)
     }, 3500);
   }
+
   return (
     <>
       <div className="flex flex-row justify-between w-full h-12 bg-amber-300/80 rounded-t-lg px-4 items-center">
@@ -92,7 +94,6 @@ export const EatingPlanHeader: FC<EatingPlanHeaderProps> = (props) => {
               boxShadow: "none",
             }}
             className="bg-transparent text-foreground flex border-none text-base h-12"
-            placeholder="in work"
           />
         </div>
         {showWhichWeek != 1 && (
