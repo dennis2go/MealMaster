@@ -6,7 +6,12 @@ import { signOutAction } from "@/app/actions";
 import { Button } from "../ui/button";
 const links = [
   { title: "Favoriten", href: "favorites", icon: FaStar, fillColor: "#fbbf24" },
-  { title: "Favoriten", href: "favorites", icon: FaStar, fillColor: "#fbbf24" },
+  {
+    title: "Einkaufsplan",
+    href: "shoppinglist",
+    icon: FaStar,
+    fillColor: "#fbbf24",
+  },
   { title: "Favoriten", href: "favorites", icon: FaStar, fillColor: "#fbbf24" },
 ];
 

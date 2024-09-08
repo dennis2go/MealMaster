@@ -12,7 +12,7 @@ export const SideBarLink: FC<SideBarLinkProps> = (props) => {
   return (
     <Link
       href={props.href}
-      className="flex flex-row items-center gap-2 md:gap-4 rounded-lg bg-yellow-300 px-4 md:px-8 py-[10px] md:py-3 group active:bg-slate-600"
+      className="flex flex-row min-w-32 md:min-w-48 items-center gap-2 md:gap-4 rounded-lg bg-amber-300/80 px-4 md:px-8 py-[10px] md:py-3 group active:bg-slate-600"
     >
       {props.icon && (
         <props.icon

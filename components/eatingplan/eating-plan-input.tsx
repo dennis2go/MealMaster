@@ -21,6 +21,7 @@ export const EatingPlanInput: FC<EatingPlanInputProps> = (props) => {
 
   // Saves the changed text in the Database after 3500ms of no new input
   async function onInputChange(value: string) {
+    setMealName(value);
     setTimeout(async () => {
       // await setBacklog(value)
     }, 3500);
